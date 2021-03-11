@@ -13,7 +13,7 @@ const eventManager = EventManager.getInstance();
 
 
 eventManager.handle.addEventListener('updateDisplay', (e)=>{
-    // update display Snippet #1
+    displayPanel.updateDisplay(e.detail)
 })
 
 

@@ -20,9 +20,20 @@ const employees = data.filter(employee=>!employee.role)
       break;
       case "edit": 
       // Snippet 1 Create Payload to send to the update endpoint.
+      const payload = {
+        id:e.currentTarget.dataset.id,
+        firstname:e.currentTarget.parentElement.querySelector('#firstname').value.trim(),
+        lastname:e.currentTarget.parentElement.querySelector('#lastname').value.trim(),
+        salary:e.currentTarget.parentElement.querySelector('#salary').value.trim(),
+        vacation:e.currentTarget.parentElement.querySelector('#vacation').value.trim(),
+     }
 
-
-      // Snippet 2. 
+      // Snippet 2.
+      // sending the new (edited) data
+      eventManager.handle.dispatchEvent(new CustomEvent('editEmployee', 
+      {bubbles:true, 
+        detail:{  payload}
+      } ));
 
       break;
     }

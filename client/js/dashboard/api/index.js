@@ -4,6 +4,8 @@
 const api = {
     getAllDepartments: 'http://localhost:5000/api/departments/',
     // Snippet #5
+    updateEmployee: `http://localhost:5000/api/departments/employee/update`,
+    
     getDepartment: (name)=>{
         return `http://localhost:5000/api/departments/name/${name}`
     },

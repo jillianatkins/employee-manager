@@ -26,6 +26,8 @@ module.exports = ()=>{
     })
 
     router.put('/employee/update', (req, res) =>{
+        // department is department controller
+        // passing in raw data
         department.updateEmployeeData(req.body)
         res.send("update employee data");
     })
